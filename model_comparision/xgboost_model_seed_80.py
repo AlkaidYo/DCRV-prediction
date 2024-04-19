@@ -57,7 +57,6 @@ def agg_instance_id(cla_str, test_df, y_pred):
 
 
 def main_train(dtrain, params_c):
-    # 训练模型
     logger.info('xgb training')
     model = xgb_model.train(params_c, dtrain)
     joblib.dump(model, xgb_cached_model_path)
