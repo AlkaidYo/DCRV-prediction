@@ -82,11 +82,9 @@ def start_plot(seed_value):
 
 
 def bar1(VM_TP_value, VM_FP_value, VM_TN_value, VM_FN_value, NC_TP_value, NC_FP_value, NC_TN_value, NC_FN_value):
-    # 时间消耗
     loss_time_VM = operate_arrays(truth_down_num, VM_TP_value, VM_FP_value, VM_FN_value, func_2_5)
     loss_time_NC = operate_arrays(truth_down_num, NC_TP_value, NC_FP_value, NC_FN_value, func_1_5)
 
-    # 迁移cost
     cost_reduction_vm = operate_arrays(truth_down_num, VM_TP_value, VM_FP_value, VM_FN_value, func_VM_250)
     cost_reduction_nc = operate_arrays(truth_down_num, NC_TP_value, NC_FP_value, NC_FN_value, func_NC_250)
 
